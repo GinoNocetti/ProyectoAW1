@@ -4,38 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrarse</title>
+    <link rel="stylesheet" href="stylesSCSS.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
-<h1>Gino's Store...</h1>
-<!-- Nombre temporal de la tienda-->
 <body>
-<ul>
-    <li><a href="index.html">Home</a></li>
-
-    <h4>¿Ya tienes cuenta? Inicie sesión...</h4>
-    <li><a href="Login.html">Iniciar Sesión...</a></li>
+    <h1 id="titulo">Gino's Store...</h1>
+    <!-- Nombre temporal de la tienda-->
+    <ul>
+        <!--<li><a href="index.html">Home</a></li>
+        <h4>¿Ya tienes cuenta? Inicie sesión...</h4>
+        <li><a href="Login.html">Iniciar Sesión...</a></li>-->
     </ul>
-    <h3>Registrarse</h3>
-
-    <form action="Registro.php" method="post">
-        <!--Ejemplo de procedimiento-->
-
-        <label for="Nombre">Ingrese su Nombre:</label>
-        <input type="text" id="Nombre" name="Nombre" required>
-
-        <label for="Apellido">Ingrese su Apellido:</label>
-        <input type="text" id="Apellido" name="Apellido" required>
-
-        <label for="email">Ingrese su Email:</label>
-        <input type="email" id="Email" name="Email" required>
-
-        <label for="contraseña">Ingrese su contraseña:</label>
-        <input type="password" id="contraseña" name="contraseña" required>
-
-        <label for="FechaDeNacimiento">Ingrese su fecha de nacimiento:</label>
-        <input type="date" id="FechaDeNacimiento" name="FechaDeNacimiento" required>
-
-        <input type="submit" value="Registrarse">       
-    </form>
+    <!--<h3>Registrarse</h3>-->
+    <div class="card card-login mx-auto my-5">
+        <h5 class="card-header">Registrarse</h5>
+        <div class="card-body">
+          <h6 class="card-subtitle"></h6>
+            <div>          
+                <input type="email" class="button button-email" id="email" name="email" required placeholder="Ingrese su correo electrónico.">
+            </div>
+            <h6 class="card-subtitle"></h6>
+            <div>
+                <input type="password" class="button button-password" id="contraseña" name="contraseña" required placeholder="Ingrese su contraseña.">
+            </div>
+            <div>
+                <input type="text" class="button button-firstname" id="text" name="text" required placeholder="Ingrese su nombre/s.">
+            </div>
+            <div>
+                <input type="text" class="button button-lastname" id="text" name="text" required placeholder="Ingrese su apellido.">
+            </div>           
+            <div>
+                <input type="date" class="button button-date" id="fecha" name="fecha" required placeholder="Ingrese su contraseña.">
+            </div>
+          <a href="Home.html" class="btn btn-primary mt-3">Registrarse</a>
+        </div>
+        <div class="card-footer text-center">
+            ¿Ya tienes cuenta? <a href="index.html">Inicia sesión aquí</a>
+        </div>
+    </div>  
 </body>
 </html>

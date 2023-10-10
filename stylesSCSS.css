@@ -1,0 +1,79 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#titulo {
+  margin-top: 10px;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: xx-large;
+  color: #272727;
+  cursor: default;
+}
+
+.card-login {
+  max-width: 500px;
+  border-radius: 75%;
+}
+.card-login .card-header {
+  text-align: center;
+  background-color: #272727;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.card-login .button {
+  width: 100%;
+  margin-top: 10PX;
+  text-align: left;
+}
+.card-login .button-email {
+  margin-top: 2px;
+}
+.card-login .btn {
+  margin-top: 5px;
+  align-items: center;
+  border-color: #272727;
+  display: flex;
+  justify-content: center;
+  transition: 0.5s;
+}
+.card-login .btn:hover {
+  background-color: #242323;
+  color: yellow;
+  border-color: yellow;
+}
+
+.button-firstname {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+.navbar .custom-btn-close {
+  color: rgb(223, 6, 6);
+}
+.navbar .custom-btn-close:hover {
+  background-color: rgb(223, 6, 6);
+  color: white;
+  border-color: rgb(223, 6, 6);
+}
+.navbar .custom-btn-carrito {
+  color: rgb(79, 183, 218);
+  border-color: rgb(79, 183, 218);
+}
+.navbar .custom-btn-carrito:hover {
+  background-color: rgb(79, 183, 218);
+  color: white;
+  border-color: rgb(79, 183, 218);
+}
+
+.flex-conteiner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card-body-products {
+  margin-left: 25px;
+}/*# sourceMappingURL=stylesSCSS.css.map */
