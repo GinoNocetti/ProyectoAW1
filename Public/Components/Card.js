@@ -14,26 +14,41 @@ export const productos = [
 ]
 
 export const CustomCard = (img, title, desc, precio) => {
-    return `
-    <div class="card-body" style="text-align: center; margin: 20px;">
-    <div class="card" style="width: 18rem;">
-      <img src="${img}" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">${title}</h5>
-        <p class="card-text">${desc}</p> <!--Texto de ejemplo-->
-      </div>
-      <div class="card-footer">
-        <div class="d-flex justify-content-between align-items-center">
-          <div>
-            <p class="card-text" style="margin-right: 10px;">${precio}</p>
-          </div>
-          <button type="button" class="btn btn-outline-success" style="border-radius: 75px;" onclick="increment()"><i class="bi bi-patch-plus" ></i></button>
-          <input type="number" class="form-control" value="1" min="1" max="10" style="width: 75px;">
-          <button type="button" class="btn btn-outline-danger"style="border-radius: 75px;" onclick="decrement()"><i class="bi bi-patch-minus"></i></button>                           
+  return `
+  <div class="card-body" style="text-align: center; margin: 20px;">
+  <div class="card" style="width: 18rem;">
+    <img src="${img}" class="card-img-top">
+    <div class="card-body">
+      <h5 class="card-title">${title}</h5>
+      <p class="card-text">${desc}</p> <!--Texto de ejemplo-->
+    </div>
+    <div class="card-footer">
+      <div class="d-flex justify-content-between align-items-center">
+        <div>
+          <p class="card-text" style="margin-right: 5px;">${precio}$</p>
         </div>
+        <div class="d-flex align-items-center">
+          <label for="quantity" class="mr-2" style="margin: 5px">Cantidad:</label>
+          <input type="number" class="form-control" id="quantity" value="1" min="1" max="10" style="width: 65px;">
+        </div>
+        <button type="button" class="btn btn-primary btn-carrito" style="border-radius: 75px; margin: 5px; text-align: center"><i class="bi bi-cart-plus-fill"></i></button>                           
       </div>
     </div>
-    </div>
-  </div>  
-    `
+  </div>
+  </div>
+  `
 }
+
+export const MuestraCard = (img, title) => {
+  return `
+  <div class="card-body" style="text-align: center; display: inline-block; margin-right: 5px">
+          <div class="card" style="width: 18rem;">
+            <img src="${img}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">${title}</h5>
+            </div>
+          </div>
+        </div>
+  `
+}
+

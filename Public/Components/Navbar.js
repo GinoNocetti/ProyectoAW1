@@ -1,10 +1,9 @@
-const url = 'http://127.0.0.1:5500/ProyectoAW1/ProyectoAW1/Public/'
+const url = 'http://127.0.0.1:5500/'
 
 const NavElements = [
-    {title: 'Home', link: `${url}Home.html`},
-    {title: 'Prendas superiores', link: `${url}Categoria1.html`},
-    {title: 'Prendas inferiores', link: `${url}Categoria2.html`},
-    {title: 'Calzado', link: `${url}Categoria3.html`},
+    {title: 'Prendas Masculinas', link: `${url}Categoria1.html`},
+    {title: 'Prendas Femeninas', link: `${url}Categoria2.html`},
+    {title: 'Joyería', link: `${url}Categoria3.html`},
 ]
 
 export const navbarComponent = `
