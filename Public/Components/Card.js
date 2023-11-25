@@ -13,31 +13,31 @@ export const productos = [
     {img: `https://briganti.com.ar/cdn/shop/products/HCAC00969011-01.jpg?v=1640618170`, title: `Zapatos`, desc: `Zapatos de vestir`, cate:3, precio: 1999.990}
 ]
 
-export const CustomCard = (img, title, desc, precio) => {
+ export const CustomCard = (img, title, desc, precio, productId) => {
   return `
   <div class="card-body" style="text-align: center; margin: 20px;">
-  <div class="card" style="width: 18rem;">
-    <img src="${img}" class="card-img-top">
-    <div class="card-body">
-      <h5 class="card-title">${title}</h5>
-      <p class="card-text">${desc}</p> <!--Texto de ejemplo-->
-    </div>
-    <div class="card-footer">
-      <div class="d-flex justify-content-between align-items-center">
-        <div>
-          <p class="card-text" style="margin-right: 5px;">${precio}$</p>
+    <div class="card" style="width: 18rem;">
+      <img src="${img}" class="card-img-top" id="imagen">
+      <div class="card-body">
+        <h5 class="card-title" data-product-id="${productId}">${title}</h5>
+        <p class="card-text">${desc}</p>
+      </div>
+      <div class="card-footer">
+        <div class="d-flex justify-content-between align-items-center">
+          <div>
+          <p class="card-price card-text" id="precio" style="margin-right: 5px;">${precio}$</p>
+          </div>
+          <div class="d-flex align-items-center">
+            <label for="quantity" class="mr-2" style="margin: 5px">Cantidad:</label>
+            <input type="number" class="form-control" id="quantity" value="1" min="1" max="5" style="width: 65px;">
+          </div>
+          <a class="btn btn-primary btn-carrito" data-product-id="${productId}" style="border-radius: 75px; margin: 5px; text-align: center"><i class="bi bi-cart-plus-fill"></i></a>       
         </div>
-        <div class="d-flex align-items-center">
-          <label for="quantity" class="mr-2" style="margin: 5px">Cantidad:</label>
-          <input type="number" class="form-control" id="quantity" value="1" min="1" max="10" style="width: 65px;">
-        </div>
-        <button type="button" class="btn btn-primary btn-carrito" style="border-radius: 75px; margin: 5px; text-align: center"><i class="bi bi-cart-plus-fill"></i></button>                           
       </div>
     </div>
   </div>
-  </div>
   `
-}
+} 
 
 export const MuestraCard = (img, title) => {
   return `
@@ -51,4 +51,30 @@ export const MuestraCard = (img, title) => {
         </div>
   `
 }
+
+export const CarritoCard = (img, title, precio, cantidad, productId) => {
+  return `
+  <div class="card-body" style="text-align: center; margin: 20px;">
+    <div class="card" style="width: 18rem;">
+      <img src="${img}" class="card-img-top" id="imagen">
+      <div class="card-body">
+        <h5 class="card-title" id="titulo">${title}</h5>
+      </div>
+      <div class="card-footer">
+        <div class="d-flex justify-content-between align-items-center">
+          <div>
+            <p class="card-text" id="precio" style="margin-right: 5px;">${precio}$</p>
+          </div>
+          <div class="d-flex align-items-center">
+            <label for="cantidad" class="mr-2" style="margin: 5px">Cantidad:</label>
+            <span id="cantidad">${cantidad}</span>
+          </div>
+          <button type="button" class="btn btn-danger btn-carrito" data-product-id="${productId}" style="border-radius: 75px; margin: 5px; text-align: center"><i class="bi bi-x-circle"></i></button>                           
+        </div>
+      </div>
+    </div>
+  </div>
+  `
+}
+
 

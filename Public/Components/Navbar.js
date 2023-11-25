@@ -1,4 +1,4 @@
-const url = 'http://127.0.0.1:5500/'
+const url = 'http://127.0.0.1:5500/Public/'
 
 const NavElements = [
     {title: 'Prendas Masculinas', link: `${url}Categoria1.html`},
@@ -27,7 +27,7 @@ export const navbarComponent = `
     </ul>
     <div class="ms-auto">
      <form class="d-flex" role="search">
-        <a href="" class="btn btn-outline-info custom-btn-carrito d-flex align-items-center" style="margin-right: 5px;"><i class="bi bi-cart4"></i></a>
+        <a href="Carrito.html" class="btn btn-outline-info custom-btn-carrito d-flex align-items-center" style="margin-right: 5px;"><i class="bi bi-cart4"></i></a>
         <a href="index.html"class="btn btn-outline-danger custom-btn-close d-flex align-items-center"><i class="bi bi-box-arrow-right"></i></a>
       </form>
     </div>
