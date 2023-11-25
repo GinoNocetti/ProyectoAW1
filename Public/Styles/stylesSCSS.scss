@@ -18,7 +18,7 @@
     
     .card-header{
         text-align: center;
-        background-color: #272727;
+        background-color: #333333;
         color: white;
         font-family:Arial, Helvetica, sans-serif
     }
@@ -31,17 +31,18 @@
         margin-top: 2px;
     }
     .btn{
+        color: white;
         margin-top: 5px;
         align-items: center;
-        border-color: #272727;
+        border-color: white;
         display: flex;
         justify-content: center ;
         transition: .5s;
     }
     .btn:hover{
-        background-color: #242323;
-        color: yellow;
-        border-color: yellow;
+        background-color: #333333;
+        color: white;
+        border-color: white;
     }
 }
 
@@ -53,21 +54,22 @@
 
 .navbar{
     .custom-btn-close{
-        color: rgb(223, 6, 6);
+        color: #272727;
+        border-color: black ;
     }
     .custom-btn-close:hover{
-        background-color: rgb(223, 6, 6);
+        background-color: #272727;
         color: white;
-        border-color: rgb(223, 6, 6);
+        border-color: black
     }
     .custom-btn-carrito{
-        color: rgb(79, 183, 218);
-        border-color: rgb(79, 183, 218);
+        color: #272727;
+        border-color: black ;
     }
     .custom-btn-carrito:hover{
-        background-color: rgb(79, 183, 218);
+        background-color: #272727;
         color: white;
-        border-color: rgb(79, 183, 218);;
+        border-color: black
     }
 }
 
@@ -78,13 +80,13 @@
 }
 
 .carrito-vacio {
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 #comprarProductos{
     background-color: rgb(45, 45, 163);
-    border-color: black;
+    border-color: #272727;
 }
 
 #comprarProductos:hover{
@@ -95,11 +97,14 @@
 
 #eliminarProductos{
     background-color: rgb(218, 39, 39);
-    border-color: black;
+    border-color: #272727;
 }
 
 #eliminarProductos:hover{
     background-color: rgb(170, 15, 15);
     border-color: black;
+    transition: 1s;
+}
+.btn-home:hover{
     transition: 1s;
 }

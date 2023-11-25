@@ -10,4 +10,3 @@ export const addToCart = (product) => {
 
     localStorage.setItem('cart', JSON.stringify(cartData));
 }
-

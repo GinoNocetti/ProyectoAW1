@@ -7,9 +7,12 @@ const NavElements = [
 ]
 
 export const navbarComponent = `
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg" style="background-color: #2ecc71;">
 <div class="container-fluid">
-  <a class="navbar-brand" href="Home.html">Gino's Store...</a>
+  <a class="navbar-brand" href="Home.html">
+  <img src="./Assets/Logo_AW1.png" alt="Logo" width="50" height="50">
+    Gino's Store...
+  </a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>

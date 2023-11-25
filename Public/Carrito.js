@@ -21,11 +21,19 @@ const mostrarCarrito = (productos) => {
 
     totalPrecioElement.textContent = `$${totalPrecio.toFixed(2)}`;
     cantidadProductosElement.textContent = cantidadProductos.toString();
+
+    const botonesEliminar = document.querySelectorAll('.btn-eliminar');
+    botonesEliminar.forEach((boton) => {
+        boton.addEventListener('click', (event) => {
+            const productId = boton.getAttribute('data-product-id');
+            eliminarProducto(productId);
+        });
+    });
 };
 
 
 const obtenerDatosLocalStorage = () => {
-    const datos = JSON.parse(localStorage.getItem('cart')) /* || [] */;
+    const datos = JSON.parse(localStorage.getItem('cart')) || [] ;
     return datos;
 };
 
@@ -40,10 +48,12 @@ const eliminarProducto = (productId) => {
 
 mostrarCarrito(cartDataFromLocalStorage);
 
-document.addEventListener('click', (event) => {
-    if (event.target.classList.contains('btn-carrito')) {
-        const productId = event.target.getAttribute('data-product-id');
-        console.log('Clic en el botón de eliminación. Producto ID:', productId);
+document.getElementById('carrito-container').addEventListener('click', (event) => {
+    const miBotonEliminar = event.target.closest('.btn-eliminar');
+    
+    if (miBotonEliminar) {
+        const productId = miBotonEliminar.getAttribute('data-product-id');
+        console.log('El producto:', productId, 'se ha eliminado correctamente!');
         eliminarProducto(productId);
     }
 });
@@ -72,6 +82,7 @@ const comprarProductos = () => {
     mostrarCarrito([]);
     resetearProductId();
 };
+
 
 const vaciarCarrito = () => {
     localStorage.removeItem('cart');

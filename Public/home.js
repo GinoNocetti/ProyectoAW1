@@ -31,5 +31,3 @@ for (let i = 0; i < categorias.length; i++) {
     const url = baseurl + categorias[i];
     CategoriaProductos(url, jsonContainers[i]);
 }
-
-

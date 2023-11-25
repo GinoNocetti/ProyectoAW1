@@ -23,26 +23,30 @@ window.addEventListener('load', () => {
 });
 
 let productIdCounter = localStorage.getItem('productIdCounter') || 1
+document.getElementById('click')
 
-document.addEventListener('click', (event) => {
-    if (event.target.classList.contains('btn-carrito')) {
-        const card = event.target.closest('.card');
-        const productImage = card.querySelector('.card-img-top').getAttribute('src'); 
-        const productName = card.querySelector('.card-title').innerText;
-        const productPrice = parseFloat(card.querySelector('.card-price').innerText);
-        const productQuantity = parseInt(card.querySelector('#quantity').value);
-        const productId = productIdCounter++;
-
-        const product = {
-            productId,
-            image: productImage,
-            name: productName,
-            price: productPrice,
-            quantity: productQuantity
-        };
-
-        addToCart(product);
-        console.log('¡Producto agregado!');
-        localStorage.setItem('productIdCounter', productIdCounter);
-      }
-});
+document.getElementById('json-container').addEventListener('click', (event) => {
+    const miBoton = event.target.closest('.btn-carrito');
+    
+    if (miBoton) {
+      const card = miBoton.closest('.card');
+      const productImage = card.querySelector('.card-img-top').getAttribute('src'); 
+      const productName = card.querySelector('.card-title').innerText;
+      const productPrice = parseFloat(card.querySelector('.card-price').innerText);
+      const productQuantity = parseInt(card.querySelector('#quantity').value);
+      const productId = productIdCounter++;
+  
+      const product = {
+        productId,
+        image: productImage,
+        name: productName,
+        price: productPrice,
+        quantity: productQuantity
+      };
+  
+      addToCart(product);
+      console.log('¡Producto agregado!');
+      localStorage.setItem('productIdCounter', productIdCounter);
+    }
+  });
+  
