@@ -15,7 +15,7 @@ export const productos = [
 
 export const CustomCard = (img, title, desc, precio, productId) => {
   return `
-  <div class="card-body" style="text-align: center; margin: 20px;">
+  <div class="card-body" style="text-align: center; margin: 15px;">
     <div class="card" style="width: 18rem; background-color: #cccccc;">
       <img src="${img}" class="card-img-top" id="imagen">
       <div class="card-body">
@@ -25,13 +25,13 @@ export const CustomCard = (img, title, desc, precio, productId) => {
       <div class="card-footer" style="background-color: #333333;">
         <div class="d-flex justify-content-between align-items-center">
           <div>
-            <p class="card-price card-text" id="precio" style="margin-right: 5px; color: white;">${precio}$</p>
+            <p class="card-price card-text" id="precio" style="margin-right: 2px; color: white;">${precio}$</p>
           </div>
           <div class="d-flex align-items-center">
-            <label for="quantity" class="mr-2" style="margin: 5px; color: white;">Cantidad:</label>
+            <label for="quantity" class="mr-2" style="margin: 2px; color: white;">Cantidad:</label>
             <input type="number" class="form-control" id="quantity" value="1" min="1" max="5" style="width: 65px;">
           </div>
-          <a class="btn btn-primary btn-carrito" id="miBotonDeCarrito" style="border-radius: 75px; margin: 5px; text-align: center; color: white;"><i class="bi bi-cart-plus-fill"></i></a>       
+          <a class="btn btn-primary btn-carrito" id="miBotonDeCarrito" style="border-radius: 75px; margin: 2px; text-align: center; color: white;"><i class="bi bi-cart-plus-fill"></i></a>       
         </div>
       </div>
     </div>
